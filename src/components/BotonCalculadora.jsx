@@ -4,9 +4,12 @@ export const BotonCalculadora = ({
   texto,
   color = '#2D2D2D',
   ancho = false,
+  accion,
 }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => accion(texto)}
+    >
       <View
         style={{
           ...styles.boton,
